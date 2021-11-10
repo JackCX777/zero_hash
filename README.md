@@ -25,4 +25,9 @@ using the built-in python socket library
 
 - $ git clone https://github.com/JackCX777/zero_hash
 - Run the console from the root project folder
-- Execute the following command: python ./zero_hash_socket_feed/main.py 
+- Execute the following command: python ./zero_hash_socket_feed/main.py
+
+### Additional
+
+You can change the trading pairs in the PRODUCTS list and the size of the calculation window 
+in the WINDOW_SIZE from /zero_hash_socket_feed/settings.py file if you wish.
