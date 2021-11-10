@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  zero_hash:
+    container_name: zero_hash_socket_feed_container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: /bin/sh "./prestart.sh"
+    volumes:
+      - ./zero_hash_socket_feed:/zero_hash_socket_feed
+    ports:
+      - "443:443"
+    restart: unless-stopped
+    networks:
+      - zero_hash
+
+networks:
+  zero_hash:
+    driver: bridge
